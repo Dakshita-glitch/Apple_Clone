@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'SFProBlack';
+    src: url(fonts/SF-Pro-Display-Black.ttf);
+    font-family: 'SFProBold';
+    src: url(fonts/SF-Pro-Display-Bold.ttf); 
+}
+@font-face {
+    font-family: 'SFProLight';
+    src: url(fonts/SF-Pro-Display-Light.ttf);
+}
+@font-face {
+    font-family: 'SFProMedium';
+    src: url(fonts/SF-Pro-Display-Medium.ttf);
+}
+@font-face {
+    font-family: 'SFProRegular';
+    src: url(fonts/SF-Pro-Display-Regular.ttf);
+}
+@font-face {
+    font-family: 'SFProHeavy';
+    src: url(fonts/SF-Pro-Text-Heavy.ttf);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'SFProLight';
+
+}
+.wrapper{
+    height:auto;
+    width:auto;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "pay"
+    "banner"
+    "shelf"
+    "carousel"
+    "footer";
+}
+
+.header{
+    grid-area:header;
+    position:fixed;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #333336;
+    padding:8px;
+    backdrop-filter: blur(8px);
+}
+.sticky{
+    position:fixed;
+}
+.header .hcontainer{
+    height:28px;
+    width:1069px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition:.2s;
+}
+.hcontainer div:nth-child(n) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hcontainer li{
+    list-style: none;
+    margin:0px 12px;
+    padding:5px 10px;
+    font-size:0.8em;
+    text-decoration:none;
+    font-weight: 100;
+    color:rgba(230,230,230,0.8);
+    transition:.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hcontainer li:hover{
+    color:white;
+}
+.logo, .search, .shop{
+    transition:.3s;
+}
+.logo .logoi, .search .searchi, .shop .shopi{
+    position:absolute;
+}
+.logo .logoiw, .search .searchiw, .shop .shopiw{
+    position:absolute;
+}
+.logo:hover .logoi, .search:hover .searchi, .shop:hover .shopi{
+    opacity: 0;
+}
+.hcontainer img{
+    height:16px;
+    width:16px;
+    transition:.2s;
+}
+.hcontainer .search, .hcontainer .shop{
+    margin:5px 0px;
+}
